@@ -1,0 +1,82 @@
+.btn-submit{
+ background-color: #480095; 
+ color:white;
+ border-radius: 5px;
+ width:100px;
+ height: 30px;
+ cursor:pointer
+}
+
+.btn-submit-form{
+ display:block; 
+ text-align: center;
+ margin-top: 30px;
+ margin-bottom: 30px; 
+}
+
+.danger{
+ color:red;
+ position: relative;
+}
+.form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  margin-left: 50px;
+  margin-right: 200px; 
+  margin-top: 60px; 
+  padding-left: 150px;
+}
+ .form input{
+  height:40px;
+  width:100%;
+} 
+
+.saludoForm{
+ margin-top: 20px;
+ padding-top: 40px; 
+}
+
+@media (min-width:601px) and (max-width:920px){
+  .form{
+    margin-left: -90px;
+    width:100%
+  }
+  .form input{
+    height:30px;
+    width:80%;
+  }
+  .saludoForm{
+    margin-top: 70px;
+    padding-top: 80px;
+    font-size: 20px; 
+  }
+ }
+
+ @media (max-width:600px){
+   .cointainer-app{
+    width:100vw; 
+   }
+   .danger{
+     display: block;
+     width:100px;
+   } 
+   .form{
+     display:block;
+     width:100%
+    } 
+    .form input{
+      display:flex;
+      margin-left: -110px;
+      width:100%;
+      height:30px;
+      margin-top: 20px;
+    }
+    .saludoForm{
+      margin-top: 70px;
+      padding-top: 80px;
+      font-size: 20px; 
+    }
+}
+

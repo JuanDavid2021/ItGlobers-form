@@ -1,0 +1,14 @@
+.footer{
+    background-color: #480095; 
+    width:100%;
+    height: 80px;
+    text-align: center;
+    color: white;
+    align-items: center;
+    display: flex; 
+}
+
+.footer p{
+    margin-left: auto;
+    margin-right:auto
+}

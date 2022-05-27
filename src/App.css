@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+   
+body{
+       font-family: 'Raleway', sans-serif; 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+     
+.airline{
+    background-color: #480095;
+    display: flex;
+    justify-content: flex-end;
+    padding:20px;
+    color:white;
+    align-items: center;  
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .container-app{
+    width:80%;
+    text-align: center;
+    margin-left:10%;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.5);  
+ }
+  .container-app img{
+    margin-right: 700px;
+   
   }
-  to {
-    transform: rotate(360deg);
+
+  .greetings{
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
-}
+    
+  .link-aerline{
+    text-decoration: none;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;  
+  }
+  
+  .nav-link{
+    display: flex;
+  }
+
+  .nav-toggle{
+    color:white;
+    background: none;
+    border:none;
+    font-size: 30px;
+    display:none;
+  }
+
+  @media (max-width:920px){
+    .airline{
+      background-color: #480095;
+      display: block;
+      justify-content: flex-end;
+      padding:0px;
+      color:white;
+      align-items: center;
+      position:relative; 
+      height:60px; 
+    }
+
+    .greetings{
+      margin-top:60px
+    }
+
+    .link-aerline{
+      padding-top: 10px;
+    }
+
+   .nav-link{ 
+    flex-direction: column;
+    display: none;
+    background-color: rgba(83, 57, 161, 0.256);
+    transition: all 2s linear;
+    color: black !important;
+    font-weight: bold;
+    margin-bottom: 30px;
+   } 
+
+  .nav-toggle{
+   display: flex;
+   color: white;
+   position: absolute;
+   right:15px;
+   top:15px;
+  }
+
+  .showMenu{
+    display: flex;
+    transition: all 2s linear;
+  }
+  
+  }
