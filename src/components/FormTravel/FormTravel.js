@@ -56,6 +56,7 @@ export const FormTravel = ({airline}) => {
   } 
 
   const handleClick=(e)=>{
+   console.log(errors) 
    e.preventDefault()
    setErrors(validateInput({
     ...input,
@@ -109,7 +110,7 @@ export const FormTravel = ({airline}) => {
         </form>
     
         <div className='btn-submit-form'>
-        <button className='btn-submit'  onClick={(e)=>handleClick(e)}>Enviar</button>
+        <button className='btn-submit' type="submit" onClick={(e)=>handleClick(e)} disabled={input.name==="" || input.email==="" ||input.cel===""||input.age==="" }>Enviar</button>
         </div>
         <Footer/>
     </div>

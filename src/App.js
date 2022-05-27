@@ -22,7 +22,6 @@ function App() {
     const [open, setOpen] = useState(false);
   
     const handleClick=(name)=>{
-     console.log(company)
      setSelect(true)
      setCompany(name) 
     }
