@@ -7,7 +7,10 @@ import { Footer } from '../Footer/Footer';
 export function validateInput(input) {
 
   const errors = {};
-
+  
+  if(input.name==="" && input.email==="" && input.cel==="" && input.age===""){
+    errors.all = "debes ingresar todos los datos"
+  } 
   if (!input.name) {
     errors.name = 'name es requerido';
   }  else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(input.name)) {
@@ -62,6 +65,16 @@ export const FormTravel = ({airline}) => {
     ...input,
     [e.target.name]: e.target.value
     }))
+
+   if(input.name===""){
+    Swal.fire({
+      title: 'Error',
+      text: 'debes completar el formulario',
+      icon: 'error',
+      timer: 1000,
+    })
+    return
+   }
    if(Object.entries(errors).length === 0){
      console.log(input)
      Swal.fire({
@@ -76,6 +89,7 @@ export const FormTravel = ({airline}) => {
      age:""   
     }) 
    }
+
    else{
     Swal.fire({
       title: 'Error',
@@ -87,6 +101,7 @@ export const FormTravel = ({airline}) => {
   }
   
   return (
+      <>
       <div className='container-form'>
          <h1 className='saludoForm'>Hola, Bienvenido<br/><br/> 
          Sabemos que quieres viajar por la aerolinea {airline}<br/><br/>Por favor diligencia el siguiente formulario:</h1>
@@ -110,9 +125,10 @@ export const FormTravel = ({airline}) => {
         </form>
     
         <div className='btn-submit-form'>
-        <button className='btn-submit' type="submit" onClick={(e)=>handleClick(e)} disabled={input.name==="" || input.email==="" ||input.cel===""||input.age==="" }>Enviar</button>
+        <button className='btn-submit' type="submit" onClick={(e)=>handleClick(e)} >Enviar</button>
         </div>
-        <Footer/>
     </div>
+    <Footer/>
+    </> 
   )
 }
